@@ -17,19 +17,19 @@
     },
     "homepage": "https://github.com/art4key/arta.git",
     "keywords": [
+        "docker-compose",
         "discord-bot",
         "bun",
-        "ollama",
         "prisma",
-        "llm"
+        "llm",
+        "ollama"
     ],
     "license": "Apache-2.0",
     "private": true,
     "scripts": {
         "start": "bun run ./src/index",
         "register": "bun run ./src/registerCommands",
-        "createModel": "bun run ./src/createModel",
-        "studio": "bunx prisma studio"
+        "createModel": "bun run ./src/createModel"
     },
     "devDependencies": {
         "@types/bun": "latest",

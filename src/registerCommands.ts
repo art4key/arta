@@ -32,6 +32,10 @@ const commands: Command[] = [
         name: "help",
         description: "Display information about Arta",
     },
+    {
+        name: "whoami",
+        description: "Display information about your profile on discord server",
+    },
 ];
 
 if (
