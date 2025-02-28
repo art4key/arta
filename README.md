@@ -4,8 +4,6 @@
 
 ![arta](public/ArtaIcon.png)
 
-https://github.com/user-attachments/assets/55a3b44d-29cb-4322-8871-6eb55bd87592
-
 ## ✨ Features
 
 - 🧠 **AI-Powered Conversations** using Ollama
