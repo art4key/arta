@@ -4,6 +4,8 @@
 
 ![arta](public/ArtaIcon.png)
 
+<video controls src="public/arta-conversation.mp4" title="arta-conversation"></video>
+
 ## ✨ Features
 
 - 🧠 **AI-Powered Conversations** using Ollama
