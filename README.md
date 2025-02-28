@@ -2,7 +2,7 @@
 
 ### Arta is a cute AI girl in discord UwU idk xD
 
-![alt text](public/ArtaIcon.png)
+![arta](public/ArtaIcon.png)
 
 # ahh i need write installation instructions fck...
 

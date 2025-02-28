@@ -26,7 +26,8 @@
     "license": "Apache-2.0",
     "private": true,
     "scripts": {
-        "start": "bun run ./src/index"
+        "start": "bun run ./src/index",
+        "register": "bun run ./src/registerCommands"
     },
     "devDependencies": {
         "@types/bun": "latest",
