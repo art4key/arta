@@ -27,7 +27,8 @@
     "private": true,
     "scripts": {
         "start": "bun run ./src/index",
-        "register": "bun run ./src/registerCommands"
+        "register": "bun run ./src/registerCommands",
+        "createModel": "bun run ./src/createModel"
     },
     "devDependencies": {
         "@types/bun": "latest",
