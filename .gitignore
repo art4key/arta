@@ -1,0 +1,11 @@
+# dependencies (bun install)
+node_modules
+
+# dotenv environment variable files
+.env
+
+# IntelliJ based IDEs
+.idea
+
+# Finder (MacOS) folder config
+.DS_Store

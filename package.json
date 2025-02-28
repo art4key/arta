@@ -1,0 +1,10 @@
+{
+  "name": "arta",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
