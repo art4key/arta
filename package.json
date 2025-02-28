@@ -1,6 +1,9 @@
 {
   "name": "arta",
   "private": true,
+  "scripts": {
+    "start": "bun run ./src/index"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
