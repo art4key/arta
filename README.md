@@ -4,7 +4,7 @@
 
 ![arta](public/ArtaIcon.png)
 
-<video controls src="public/arta-conversation.mp4" title="arta-conversation"></video>
+https://github.com/user-attachments/assets/55a3b44d-29cb-4322-8871-6eb55bd87592
 
 ## ✨ Features
 
