@@ -1,8 +1,8 @@
 import type { Message } from "discord.js";
-import ollama from "../../ollama";
+import ollamaResponse from "../../ollama/ollamaResponse";
 import upsertUser from "../../prisma/upsertUser";
 import getRandomNumber from "../../utils/getRandomNumber";
-import pkg from "../../utils/pkg";
+import isBotPinged from "../isBotPinged";
 
 const handleMessageCreate = async (message: Message) => {
     if (message.author.bot) return;
@@ -13,16 +13,8 @@ const handleMessageCreate = async (message: Message) => {
         experienceIncrement: getRandomNumber(1, 5),
     });
 
-    if (message.content === "meow") {
-        message.reply("meow");
-    } else {
-        const response = await ollama.generate({
-            model: pkg.name,
-            prompt: message.content,
-            stream: false,
-        });
-
-        message.reply(response.response);
+    if (isBotPinged(message)) {
+        message.reply(await ollamaResponse(message));
     }
 };
 
