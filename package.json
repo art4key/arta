@@ -28,7 +28,8 @@
     "scripts": {
         "start": "bun run ./src/index",
         "register": "bun run ./src/registerCommands",
-        "createModel": "bun run ./src/createModel"
+        "createModel": "bun run ./src/createModel",
+        "studio": "bunx prisma studio"
     },
     "devDependencies": {
         "@types/bun": "latest",

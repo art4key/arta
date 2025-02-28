@@ -1,0 +1,18 @@
+services:
+  arta_database:
+    image: postgres:latest
+    container_name: arta_database
+    restart: always
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: ${POSTGRES_DATABASE}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - arta_pgdata:/var/lib/postgresql/data
+
+volumes:
+  arta_pgdata:
+    name: arta_pgdata
