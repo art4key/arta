@@ -1,5 +1,29 @@
 {
     "name": "arta",
+    "description": "Arta is a cute AI girl in discord UwU idk xD",
+    "version": "0.1.0",
+    "author": {
+        "name": "art4key",
+        "url": "https://github.com/art4key",
+        "email": "art404key@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/art4key/arta.git"
+    },
+    "bugs": {
+        "url": "https://github.com/art4key/arta/issues",
+        "email": "art404key@gmail.com"
+    },
+    "homepage": "https://github.com/art4key/arta.git",
+    "keywords": [
+        "discord-bot",
+        "bun",
+        "ollama",
+        "prisma",
+        "llm"
+    ],
+    "license": "Apache-2.0",
     "private": true,
     "scripts": {
         "start": "bun run ./src/index"
@@ -7,9 +31,19 @@
     "devDependencies": {
         "@types/bun": "latest",
         "prettier": "3.5.2",
-        "prettier-plugin-organize-imports": "4.1.0"
+        "prettier-plugin-organize-imports": "4.1.0",
+        "prisma": "^6.4.1"
     },
     "peerDependencies": {
         "typescript": "^5.7.3"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.4.1",
+        "discord.js": "^14.18.0",
+        "ollama": "^0.5.14"
+    },
+    "optionalDependencies": {
+        "bufferutil": "^4.0.9",
+        "zlib-sync": "^0.1.9"
     }
 }

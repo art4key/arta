@@ -1,1 +1,3 @@
-console.log("Why are you looking at commit history? xD");
+import printEntryMessage from "../utils/entryMessage";
+
+printEntryMessage();

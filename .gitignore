@@ -9,3 +9,6 @@ node_modules
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Prisma migrations
+prisma/migrations
