@@ -79,7 +79,3 @@ ollama --help
 Listen:
 
 https://youtu.be/cNB4ucAvJ8g
-
-Watch:
-
-https://art4k.su/public/arta-conversation
