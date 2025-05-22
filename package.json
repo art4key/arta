@@ -1,0 +1,36 @@
+{
+    "name": "arta",
+    "description": "Arta is a cute AI girl in telegram UwU~ idk xD",
+    "version": "0.1.0",
+    "author": {
+        "name": "art4key",
+        "url": "https://github.com/art4key",
+        "email": "art404key@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/art4key/arta.git"
+    },
+    "bugs": {
+        "url": "https://github.com/art4key/arta/issues",
+        "email": "art404key@gmail.com"
+    },
+    "homepage": "https://github.com/art4key/arta.git",
+    "keywords": [
+        "telegram-bot",
+        "bun"
+    ],
+    "license": "Apache-2.0",
+    "private": true,
+    "scripts": {
+        "start": "bun run src/index"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "prettier": "3.5.2",
+        "prettier-plugin-organize-imports": "4.1.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5.8.3"
+    }
+}
