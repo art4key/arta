@@ -1,0 +1,21 @@
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Secrets
+.env
+.env.example
+
+# Docker
+Dockerfile
+.dockerignore
+compose.yaml
+
+# Documentation and scripts
+README.md
+LICENSE
+Makefile
+
+# Other
+.DS_Store
