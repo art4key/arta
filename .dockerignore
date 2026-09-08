@@ -8,14 +8,14 @@
 .env.example
 
 # Docker
-Dockerfile
 .dockerignore
+Dockerfile
 compose.yaml
 
-# Documentation and scripts
+# Documentation
 README.md
 LICENSE
-Makefile
 
 # Other
 .DS_Store
+Makefile

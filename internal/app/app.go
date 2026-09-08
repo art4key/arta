@@ -4,18 +4,25 @@ import (
 	"context"
 	"log"
 
-	"github.com/art4key/arta/internal/config"
+	"github.com/art4key/arta/internal/db"
 	"github.com/go-telegram/bot"
-	"github.com/go-telegram/bot/models"
 )
 
-func Run(ctx context.Context, cfg config.Config) error {
+type Application struct {
+	db *db.Database
+}
+
+func Run(ctx context.Context, db *db.Database, token string) error {
+	app := &Application{
+		db: db,
+	}
+
 	opts := []bot.Option{
-		bot.WithDefaultHandler(handler),
+		bot.WithDefaultHandler(app.handler),
 		bot.WithSkipGetMe(),
 	}
 
-	b, err := bot.New(cfg.TelegramBotToken, opts...)
+	b, err := bot.New(token, opts...)
 	if err != nil {
 		return err
 	}
@@ -25,20 +32,9 @@ func Run(ctx context.Context, cfg config.Config) error {
 		return err
 	}
 
-	log.Printf("@%s is started!", me.Username)
+	log.Printf("@%[1]s is started! Link: https://t.me/%[1]s", me.Username)
 
 	b.Start(ctx)
 
 	return nil
-}
-
-func handler(ctx context.Context, b *bot.Bot, u *models.Update) {
-	if u.Message == nil {
-		return
-	}
-
-	b.SendMessage(ctx, &bot.SendMessageParams{
-		ChatID: u.Message.Chat.ID,
-		Text:   u.Message.Text,
-	})
 }
