@@ -8,6 +8,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
+      - LOG_LEVEL=${LOG_LEVEL:-info}
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - POSTGRES_DSN=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}

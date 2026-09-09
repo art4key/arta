@@ -6,7 +6,7 @@ import (
 )
 
 type Database struct {
-	db *gorm.DB
+	client *gorm.DB
 }
 
 func New(dsn string) (*Database, error) {
@@ -19,15 +19,20 @@ func New(dsn string) (*Database, error) {
 		return nil, err
 	}
 
-	return &Database{db: db}, nil
+	return &Database{client: db}, nil
 }
 
-func (d *Database) SaveMessage(chatID int64, msgID int, s, c string) error {
+func (db *Database) SaveMessage(
+	chatID int64,
+	msgID int,
+	sender string,
+	content string,
+) error {
 	msg := Message{
 		ChatID:    chatID,
 		MessageID: msgID,
-		Sender:    s,
-		Content:   c,
+		Sender:    sender,
+		Content:   content,
 	}
-	return d.db.Create(&msg).Error
+	return db.client.Create(&msg).Error
 }

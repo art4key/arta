@@ -2,25 +2,29 @@ package app
 
 import (
 	"context"
-	"log"
 
+	"github.com/art4key/arta/internal/ai"
 	"github.com/art4key/arta/internal/db"
+	"github.com/art4key/arta/internal/logi"
 	"github.com/go-telegram/bot"
 )
 
 type Application struct {
 	db *db.Database
+	ai *ai.AI
 }
 
-func Run(ctx context.Context, db *db.Database, token string) error {
+func Run(ctx context.Context, db *db.Database, ai *ai.AI, token string) error {
 	app := &Application{
 		db: db,
+		ai: ai,
 	}
 
 	opts := []bot.Option{
 		bot.WithDefaultHandler(app.handler),
 		bot.WithSkipGetMe(),
 	}
+	opts = append(opts, debugBotOptions()...)
 
 	b, err := bot.New(token, opts...)
 	if err != nil {
@@ -32,7 +36,7 @@ func Run(ctx context.Context, db *db.Database, token string) error {
 		return err
 	}
 
-	log.Printf("@%[1]s is started! Link: https://t.me/%[1]s", me.Username)
+	logi.Info("bot started", "link", "https://t.me/"+me.Username)
 
 	b.Start(ctx)
 
